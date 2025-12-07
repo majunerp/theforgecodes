@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "The Forge Codes - Free Roblox Rewards December 2025",
-  description: "Discover the latest the forge codes for free race rerolls, luck totems, and exclusive rewards. Updated daily with working codes, race guides, and forging strategies for December 2025.",
+  description: "Here is the updated list of active The Forge codes for December 2025. Use them to unlock free Gems, Totems, and Race Rerolls. We have removed all expired codes.",
   openGraph: {
     title: "The Forge Codes - Free Roblox Rewards December 2025",
     description: "Get the latest the forge codes for free race rerolls and exclusive rewards",
