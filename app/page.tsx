@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -151,11 +150,7 @@ export default function Home() {
                   Besides using the codes listed above, players can earn free race rerolls by completing daily quests and finding hidden chests in the <strong className="text-white">Volcanic Depths</strong>. If you are looking to get a Legendary race like the <strong className="text-white">Dragonborn</strong> or <strong className="text-white">Angel</strong>, make sure to save up your Gems.
                 </p>
                 <p>
-                  Don't forget to check our{" "}
-                  <Link href="/races" className="font-semibold text-amber-400 hover:underline">Race Tier List</Link>{" "}
-                  to see which race you should aim for before using your rerolls! You can also visit our{" "}
-                  <Link href="/races" className="font-semibold text-amber-400 hover:underline">Races Guide</Link>{" "}
-                  for detailed stats.
+                  Don't forget to check our <span className="font-semibold text-amber-400">Race Tier List</span> to see which race you should aim for before using your rerolls! You can also visit our <span className="font-semibold text-amber-400">Races Guide</span> for detailed stats.
                 </p>
               </div>
             </div>
