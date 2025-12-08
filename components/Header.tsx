@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b-2 border-amber-600 bg-zinc-950/95 backdrop-blur supports-[backdrop-filter]:bg-zinc-950/80">
-      <div className="max-w-6xl mx-auto flex h-20 items-center justify-start px-6 md:px-8 lg:px-12">
+      <div className="max-w-6xl mx-auto flex h-20 items-center justify-start px-6 md:px-10 lg:px-16">
         {/* Logo - Centered */}
         <Link href="/" className="flex items-center space-x-3 group">
           <div className="relative">
