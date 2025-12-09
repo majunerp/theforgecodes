@@ -61,8 +61,23 @@ export default function Home() {
   const expiredCodes = ["RELEASE", "BETARELEASE!", "POSTRELEASEQNA"];
 
   return (
-    <main className="min-h-screen bg-black flex justify-center">
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-20 px-6 py-16 md:gap-24 md:px-10 md:py-20 lg:gap-28 lg:px-16">
+    <main className="min-h-screen bg-black flex justify-center relative">
+      {/* Background Image with Overlay */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url(/the-forge-roblox-codes.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.35,
+        }}
+      />
+
+      {/* Dark Gradient Overlay */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
+
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-20 px-6 py-16 md:gap-24 md:px-10 md:py-20 lg:gap-28 lg:px-16 relative z-10">
 
         {/* Hero Section */}
         <section className="w-full flex flex-col items-center text-center space-y-6">
@@ -145,11 +160,11 @@ export default function Home() {
               <h2 className="text-2xl font-bold text-white md:text-3xl">
                 How to Get More Free Rerolls in The Forge
               </h2>
-              <div className="mx-auto space-y-4 text-base leading-relaxed text-zinc-300 md:max-w-3xl md:text-lg">
-                <p>
+              <div className="mx-auto space-y-4 text-base text-zinc-300 md:max-w-3xl md:text-lg text-center">
+                <p className="leading-relaxed">
                   Besides using the codes listed above, players can earn free race rerolls by completing daily quests and finding hidden chests in the <strong className="text-white">Volcanic Depths</strong>. If you are looking to get a Legendary race like the <strong className="text-white">Dragonborn</strong> or <strong className="text-white">Angel</strong>, make sure to save up your Gems.
                 </p>
-                <p>
+                <p className="leading-relaxed">
                   Don't forget to check our <span className="font-semibold text-amber-400">Race Tier List</span> to see which race you should aim for before using your rerolls! You can also visit our <span className="font-semibold text-amber-400">Races Guide</span> for detailed stats.
                 </p>
               </div>
@@ -203,27 +218,38 @@ export default function Home() {
         <section className="w-full border-t border-zinc-800 pt-16">
           <div className="mb-10 text-center space-y-2">
             <h2 className="text-2xl font-bold text-white md:text-4xl">
-              How to Redeem <span className="text-amber-500">The Forge Codes</span>
+              How to Use <span className="text-amber-500">The Forge Codes</span>
             </h2>
-            <p className="text-lg text-zinc-400">
-              Follow these simple steps to claim your free rewards
-            </p>
           </div>
 
-          <div className="mx-auto max-w-2xl space-y-7">
+          {/* Screenshot */}
+          <div className="mb-12 mx-auto max-w-3xl">
+            <img
+              src="https://assets-prd.ignimgs.com/2025/11/27/theforgecodes-2-1764262579991.png"
+              alt="How to redeem codes in The Forge"
+              className="w-full rounded-2xl border border-zinc-800 shadow-2xl"
+            />
+          </div>
+
+          <p className="text-center text-lg text-zinc-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Ready to redeem the codes above? Here's what you need to do:
+          </p>
+
+          <div className="mx-auto max-w-3xl space-y-8">
             {[
-              { step: 1, title: "Launch The Forge Game", desc: "Open Roblox and navigate to The Forge game." },
-              { step: 2, title: "Open Settings", desc: "Click the Gear icon (Settings) at the top-left of your screen." },
-              { step: 3, title: "Find Codes Section", desc: "Scroll down to find the \"Codes\" section." },
-              { step: 4, title: "Enter & Claim", desc: "Enter the code exactly as shown and click Claim." },
+              { step: 1, title: "Load up The Forge on Roblox" },
+              { step: 2, title: "Open the Settings menu in the top left corner of the screen." },
+              { step: 3, title: "Scroll down to the bottom of Settings to find the Codes bar" },
+              { step: 4, title: "Copy the code from this article" },
+              { step: 5, title: "Enter the code into the \"Type Here\" bar" },
+              { step: 6, title: "Press claim" },
             ].map((item) => (
-              <div key={item.step} className="flex items-start gap-5">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-lg font-bold text-white shadow-lg">
+              <div key={item.step} className="flex items-start gap-6">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-xl font-bold text-white shadow-lg">
                   {item.step}
                 </div>
-                <div className="space-y-1 pt-1">
-                  <h3 className="text-lg font-bold text-white">{item.title}</h3>
-                  <p className="text-zinc-400">{item.desc}</p>
+                <div className="pt-2">
+                  <p className="text-lg md:text-xl text-white leading-relaxed">{item.title}</p>
                 </div>
               </div>
             ))}
