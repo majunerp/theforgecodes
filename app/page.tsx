@@ -66,10 +66,10 @@ export default function Home() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.35) 0%, rgba(12,10,8,0.25) 40%, rgba(0,0,0,0.45) 100%), url(/forge-hero.png)',
-          backgroundSize: '520px auto',
-          backgroundPosition: 'top left',
-          backgroundRepeat: 'repeat',
+          backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.35) 0%, rgba(12,10,8,0.25) 40%, rgba(0,0,0,0.45) 100%), url(/wp7986935.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
       />
 
