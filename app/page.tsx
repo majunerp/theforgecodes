@@ -66,16 +66,15 @@ export default function Home() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(/the-forge-roblox-codes.webp)',
+          backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.35) 0%, rgba(12,10,8,0.25) 40%, rgba(0,0,0,0.45) 100%), url(/forge-hero.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.35,
         }}
       />
 
       {/* Dark Gradient Overlay */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
 
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-20 px-6 py-16 md:gap-24 md:px-10 md:py-20 lg:gap-28 lg:px-16 relative z-10">
 
@@ -229,6 +228,19 @@ export default function Home() {
               alt="How to redeem codes in The Forge"
               className="w-full rounded-2xl border border-zinc-800 shadow-2xl"
             />
+          </div>
+
+          {/* Image #1 reference from IGN */}
+          <div className="mx-auto mb-10 max-w-3xl overflow-hidden rounded-2xl border border-amber-500/50 bg-black/50 shadow-2xl shadow-amber-500/10 backdrop-blur">
+            <img
+              src="/theforgecodes-1.png"
+              alt="In-game code entry screen (Image #1)"
+              className="w-full object-cover"
+            />
+            <div className="flex items-center justify-between px-4 py-3 text-sm text-amber-200/90">
+              <span className="font-semibold">Image #1</span>
+              <span className="text-amber-300">In-game Codes menu preview</span>
+            </div>
           </div>
 
           <p className="text-center text-lg text-zinc-300 mb-12 max-w-2xl mx-auto leading-relaxed">
