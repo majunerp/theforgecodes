@@ -66,7 +66,7 @@ export default function Home() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.35) 0%, rgba(12,10,8,0.25) 40%, rgba(0,0,0,0.45) 100%), url(/wp7986935.webp)',
+          backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(12,10,8,0.45) 40%, rgba(0,0,0,0.65) 100%), url(/wp7986935.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -74,7 +74,7 @@ export default function Home() {
       />
 
       {/* Dark Gradient Overlay */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/60 via-black/45 to-black/70" />
 
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-20 px-6 py-16 md:gap-24 md:px-10 md:py-20 lg:gap-28 lg:px-16 relative z-10">
 
