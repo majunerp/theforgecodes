@@ -1,28 +1,22 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import CopyButton from "@/components/CopyButton";
 
-const lastUpdated = "December 12, 2025";
+const lastUpdated = "December 13, 2025";
 
 const activeCodes = [
   {
-    code: "FREESPINS",
-    reward: "+8 Race Rerolls, +1 Luck Totem",
+    code: "PEAK!",
+    reward: "+10 Race Rerolls",
     status: "New",
-    note: "Fresh drop after the latest reroll event.",
-    added: "December 12, 2025",
-  },
-  {
-    code: "SORRYFORSHUTDOWN",
-    reward: "+5 Race Rerolls",
-    status: "Active",
-    note: "Compensation for the recent downtime.",
-    added: "December 10, 2025",
+    note: "A milestone-style drop that gives you a clean stack of rerolls to chase better classes.",
+    added: "December 7, 2025",
   },
 ];
 
 const expiredCodes = [
-  { code: "PEAK!", reward: "+10 Rerolls" },
   { code: "400K!", reward: "+8 Rerolls" },
+  { code: "SORRYFORSHUTDOWN", reward: "+5 Rerolls" },
   { code: "300K!", reward: "+5 Rerolls, +1 Luck Totem" },
   { code: "100KLIKES", reward: "+10 Rerolls" },
   { code: "200K!", reward: "+5 Rerolls" },
@@ -34,17 +28,18 @@ const expiredCodes = [
   { code: "5KLIKES", reward: "+2 Rerolls, +1 Miner Totem" },
   { code: "BETARELEASE!", reward: "+2 Rerolls" },
   { code: "POSTRELEASEQNA", reward: "+1 Reroll" },
+  { code: "RELEASE", reward: "Release milestone reward" },
 ];
 
 const redeemSteps = [
   { title: "Open Settings", detail: "Tap the gear icon in the top-left corner after loading The Forge." },
   { title: "Scroll to Codes", detail: "Inside Settings, scroll to the bottom until you see the Codes field." },
-  { title: "Enter the code exactly", detail: "Type or paste the code from this page. Keep the caps and do not include brackets." },
+  { title: "Enter the code exactly", detail: "Type or paste The Forge codes from this page exactly as shown. Keep the caps and do not include brackets." },
   { title: "Press Claim", detail: "Hit Claim and check your reroll and totem inventory before leaving the menu." },
 ];
 
 const rerollTips = [
-  { title: "Save rerolls for legendary races", detail: "Stack codes before chasing Dragonborn or Angel and reroll during double luck boosts." },
+  { title: "Save rerolls for legendary races", detail: "Stack The Forge codes before chasing Dragonborn or Angel, then reroll during event boosts so every attempt counts." },
   { title: "Pair rerolls with Luck Totems", detail: "Activate the totem before rerolling or mining in the Volcanic Depths to stretch gains." },
   { title: "Farm crystals while codes last", detail: "Combine active codes with daily quests and chest routes so you always have rerolls ready." },
 ];
@@ -52,36 +47,44 @@ const rerollTips = [
 const troubleshooting = [
   { title: "Case sensitivity", detail: "Enter the codes in caps and without spaces. Avoid adding the square brackets you see in screenshots." },
   { title: "Expired milestones", detail: "Older milestones like 300K!, 100KLIKES, and 5KLIKES are now archived and will not redeem." },
+  { title: "\"This code does not exist\"", detail: "That message usually means the code has expired or you added an extra space. Copy-paste, then delete trailing spaces before claiming." },
   { title: "Outdated server", detail: "If Claim does nothing, rejoin a fresh server or reboot Roblox after an update." },
 ];
 
 const updateLog = [
-  { date: "December 12, 2025", detail: "Added FREESPINS (+8 rerolls, +1 Luck Totem) from the new reroll event." },
-  { date: "December 10, 2025", detail: "SORRYFORSHUTDOWN remains active as compensation for downtime." },
-  { date: "December 3, 2025", detail: "Moved milestone codes such as 300K! and 100KLIKES into the expired archive." },
+  { date: "December 13, 2025", detail: "Re-verified The Forge codes in fresh servers and refreshed the guide sections for faster redemption." },
+  { date: "December 7, 2025", detail: "Added PEAK! (+10 rerolls) as a confirmed working entry in our The Forge codes list." },
+  { date: "December 4, 2025", detail: "Archived older milestones (400K!, 300K!, 100KLIKES) after they stopped redeeming in new servers." },
 ];
 
 const faqEntries = [
   {
     question: "What is the newest The Forge code?",
-    answer: "FREESPINS is the latest code and was verified on December 12, 2025. It grants 8 rerolls and a Luck Totem.",
+    answer: "PEAK! is the newest working code listed on this page. If you paste it exactly as shown, it grants 10 free race rerolls.",
   },
   {
-    question: "Can I still use SORRYFORSHUTDOWN?",
-    answer: "Yes. It is still active and delivers 5 free race rerolls as compensation for the recent shutdown.",
+    question: "Why do The Forge codes say they do not exist?",
+    answer: "Most The Forge codes failures come from expired entries or tiny formatting issues (extra spaces, wrong capitalization). Copy the code from our table, remove trailing spaces, then press Claim in Settings.",
   },
   {
     question: "How do I get more codes?",
-    answer: "Follow the developer on social channels, check the in-game announcements, and bookmark this page. We track new drops the day they appear.",
+    answer: "Bookmark this page, watch in-game announcements, and keep an eye on the community Discord for event drops. We check The Forge codes daily and update the list as soon as new rewards appear.",
+  },
+  {
+    question: "When do new The Forge codes usually drop?",
+    answer: "Most new codes arrive around milestones, weekends, and limited-time events. If a seasonal update goes live, check the working list first, then follow the redeem steps below.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "The Forge Codes - Free Rerolls and Totems (December 2025)",
-  description: "Updated with the newest The Forge codes including FREESPINS and SORRYFORSHUTDOWN. Redeem instructions, code archive, and tips to maximize rerolls.",
+  title: "The Forge Codes (December 2025) - Working Rerolls, Redeem Steps, and Updates",
+  description: "Get the latest The Forge codes (December 2025), learn how to redeem them in Roblox, and see a verified archive of expired codes. Updated regularly with reroll rewards and practical tips.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "The Forge Codes - Free Rerolls and Totems (December 2025)",
-    description: "Use the latest The Forge codes for rerolls, Luck Totems, and quick redemption tips.",
+    title: "The Forge Codes (December 2025) - Working Rerolls, Redeem Steps, and Updates",
+    description: "Use the latest The Forge codes for rerolls and learn the fastest way to redeem them in-game.",
   },
 };
 
@@ -89,6 +92,19 @@ export default function Home() {
   const statusStyles: Record<string, string> = {
     New: "bg-emerald-500/10 text-emerald-200 border-emerald-500/40 shadow-[0_0_10px_rgba(16,185,129,0.2)]",
     Active: "bg-blue-500/10 text-blue-100 border-blue-400/40 shadow-[0_0_10px_rgba(59,130,246,0.2)]",
+  };
+  const activeCodesPreview = activeCodes.map((item) => item.code).join(", ");
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqEntries.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
   };
 
   return (
@@ -140,8 +156,8 @@ export default function Home() {
           </div>
           <div className="group flex flex-col items-center gap-3 rounded-2xl border border-zinc-700/30 bg-zinc-900/20 p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:bg-emerald-500/5">
             <span className="text-xs font-semibold text-emerald-200/80 group-hover:text-emerald-200 tracking-wide">Best Reward</span>
-            <span className="text-4xl font-bold text-white group-hover:text-emerald-400 group-hover:drop-shadow-[0_0_10px_rgba(52,211,153,0.5)] transition-all">+8 Rerolls</span>
-            <p className="text-xs text-zinc-500 group-hover:text-zinc-400">Includes Luck Totem</p>
+            <span className="text-4xl font-bold text-white group-hover:text-emerald-400 group-hover:drop-shadow-[0_0_10px_rgba(52,211,153,0.5)] transition-all">+10 Rerolls</span>
+            <p className="text-xs text-zinc-500 group-hover:text-zinc-400">From the current working list</p>
           </div>
           <div className="group flex flex-col items-center gap-3 rounded-2xl border border-zinc-700/30 bg-zinc-900/20 p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:bg-blue-500/5">
             <span className="text-xs font-semibold text-blue-200/80 group-hover:text-blue-100 tracking-wide">Archived</span>
@@ -154,7 +170,7 @@ export default function Home() {
           <div className="flex flex-col gap-2 text-center">
             <h2 className="text-3xl font-bold text-white md:text-4xl text-glow tracking-tight">Active The Forge Codes</h2>
             <p className="mx-auto w-full max-w-2xl text-center text-sm text-zinc-400 md:text-base leading-relaxed whitespace-nowrap">
-              Copied directly from the live list <span className="text-amber-500 font-mono font-medium">(FREESPINS, SORRYFORSHUTDOWN)</span> and tested on {lastUpdated}.
+              Copied directly from the live list <span className="text-amber-500 font-mono font-medium">({activeCodesPreview})</span> and tested on {lastUpdated}.
             </p>
           </div>
 
@@ -200,13 +216,121 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="forge-codes-guide" className="space-y-6">
+          <div className="text-center space-y-2">
+            <h2 className="text-2xl font-bold text-white md:text-3xl text-glow">A Practical Guide to The Forge Codes</h2>
+            <p className="mx-auto max-w-3xl text-sm text-zinc-400 md:text-base leading-relaxed">
+              The Forge codes are short redemption strings that unlock free in-game rewards, most commonly race rerolls (and occasionally other boosts). If you play The Forge for its
+              forging-and-mining loop, you already know that a great run can hinge on your class or race perks. This guide explains what The Forge codes do, how to redeem The Forge codes
+              safely, why some The Forge codes fail, and where new The Forge codes usually appear during updates and events.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-2 items-start">
+            <div className="space-y-5 rounded-3xl border border-zinc-800 bg-zinc-950/60 backdrop-blur-md p-6 shadow-lg shadow-black/30 text-left">
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-white">What The Forge codes do (and why rerolls matter)</h3>
+                <p className="text-sm text-zinc-300 leading-relaxed">
+                  In The Forge, rerolls let you change your race/class profile so you can chase perks that better fit your playstyle. Some players prefer tankier options for early survival,
+                  while others prioritize damage, mobility, or utility when they start forging stronger weapons and armor. The Forge codes are valuable because they cut out the slow grind
+                  between attempts—especially when you are trying to land a specific build before an event window ends.
+                </p>
+                <p className="text-sm text-zinc-300 leading-relaxed">
+                  The core gameplay revolves around mining ores, crafting gear, and experimenting with different traits. Because stats and perks directly affect how quickly you clear fights and
+                  how efficiently you gather materials, The Forge codes that grant rerolls can feel like a quality-of-life upgrade rather than a luxury. If you are new, redeem The Forge codes
+                  early to avoid being stuck with a race you do not enjoy. If you are experienced, stack The Forge codes first, then reroll in batches so you can compare builds back-to-back.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-white">How we verify The Forge codes on this page</h3>
+                <p className="text-sm text-zinc-300 leading-relaxed">
+                  We treat this homepage like a live checklist. When we add or move a code, we paste it into the in-game Codes field, hit Claim, and confirm the reward actually lands in your
+                  inventory. If a code returns a “does not exist” message (or silently does nothing), we move it into the archive. That is why you will see The Forge codes split into a working
+                  table and an expired list—so you can spend time forging, not troubleshooting.
+                </p>
+                <p className="text-sm text-zinc-300 leading-relaxed">
+                  For the cleanest results, we also re-check The Forge codes in fresh servers after big patches. A code that worked yesterday can flip to expired after a milestone ends, and some
+                  The Forge codes behave differently depending on when your server started. If you are stuck, jump to the redeem steps below and try again in a new server.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-white">Where to find new The Forge codes</h3>
+                <p className="text-sm text-zinc-300 leading-relaxed">
+                  New The Forge codes usually arrive alongside milestones, weekend boosts, release-style events, or seasonal updates. The fastest sources are in-game announcements and the
+                  community hubs where the developers post event details. If you prefer a single bookmark, keep this page pinned and check the working list first—the moment a new The Forge code
+                  drops, it shows up here after we verify it.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="group overflow-hidden rounded-3xl border border-zinc-800 bg-black/60 shadow-2xl shadow-black/40 transition-all hover:border-amber-500/40">
+                <div className="overflow-hidden">
+                  <Image
+                    src="/theforgecodes-1.png"
+                    alt="The Forge codes field inside the Settings menu"
+                    width={1200}
+                    height={675}
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="border-t border-zinc-800 bg-zinc-900/80 px-3 py-2 text-xs font-medium text-zinc-300 group-hover:text-amber-100 transition-colors">
+                  The Forge codes are redeemed in Settings → Codes.
+                </div>
+              </div>
+
+              <div className="group overflow-hidden rounded-3xl border border-zinc-800 bg-black/60 shadow-2xl shadow-black/40 transition-all hover:border-amber-500/40">
+                <div className="overflow-hidden">
+                  <Image
+                    src="/wp7986935.webp"
+                    alt="The Forge themed artwork background"
+                    width={1400}
+                    height={788}
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="border-t border-zinc-800 bg-zinc-900/80 px-3 py-2 text-xs font-medium text-zinc-300 group-hover:text-amber-100 transition-colors">
+                  Tip: redeem The Forge codes before long mining sessions.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 backdrop-blur-md p-6 text-left shadow-lg shadow-black/30">
+              <h3 className="text-base font-bold text-white mb-2">Quick checklist</h3>
+              <p className="text-sm text-zinc-300 leading-relaxed">
+                Copy The Forge codes exactly, remove trailing spaces, and claim in a fresh server if needed. If a code fails twice, treat it as expired and use the archive to avoid repeats.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 backdrop-blur-md p-6 text-left shadow-lg shadow-black/30">
+              <h3 className="text-base font-bold text-white mb-2">Best time to redeem</h3>
+              <p className="text-sm text-zinc-300 leading-relaxed">
+                Redeem The Forge codes right before rerolling sessions or event boosts. During early December 2025, weekend events ran from <strong>December 6–8, 2025</strong> with extra luck
+                and free rerolls—timed drops like that are when The Forge codes matter most.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 backdrop-blur-md p-6 text-left shadow-lg shadow-black/30">
+              <h3 className="text-base font-bold text-white mb-2">Stay updated</h3>
+              <p className="text-sm text-zinc-300 leading-relaxed">
+                Developers often tease seasonal updates (like a Christmas-style event) before announcing the full reward list. When that happens, check The Forge codes here first, then follow
+                our redemption steps so you do not miss limited rerolls.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section id="redeem" className="grid gap-6 rounded-3xl border border-zinc-800 bg-zinc-950/60 backdrop-blur-md p-6 shadow-xl shadow-black/30 md:grid-cols-[1.1fr_0.9fr] md:items-start overflow-hidden relative">
           <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent pointer-events-none" />
           <div className="space-y-6 relative z-10">
             <div className="space-y-2">
               <h2 className="text-2xl font-bold text-white md:text-3xl text-glow">How to Redeem</h2>
               <p className="text-xs text-zinc-400 md:text-sm">
-                Follow these exact steps to claim your rewards in The Forge.
+                Follow these exact steps to redeem The Forge codes and claim your rewards in The Forge.
               </p>
             </div>
             <div className="space-y-4">
@@ -227,13 +351,27 @@ export default function Home() {
           <div className="space-y-4 relative z-10">
             <div className="group overflow-hidden rounded-2xl border border-zinc-800 bg-black/60 shadow-2xl transition-all hover:border-amber-500/50 hover:shadow-amber-500/10">
               <div className="overflow-hidden">
-                <img src="/codes-step-1.jpg" alt="Step one: open Settings and find the Codes bar" className="w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <Image
+                  src="/codes-step-1.jpg"
+                  alt="Step one: open Settings and find the Codes bar"
+                  width={1200}
+                  height={675}
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
               <div className="border-t border-zinc-800 bg-zinc-900/80 px-3 py-2 text-xs font-medium text-zinc-300 group-hover:text-amber-100 transition-colors">Step 1: Open Settings</div>
             </div>
             <div className="group overflow-hidden rounded-2xl border border-zinc-800 bg-black/60 shadow-2xl transition-all hover:border-amber-500/50 hover:shadow-amber-500/10">
               <div className="overflow-hidden">
-                <img src="/codes-step-2.jpg" alt="Step two: enter the code and press Claim" className="w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <Image
+                  src="/codes-step-2.jpg"
+                  alt="Step two: enter the code and press Claim"
+                  width={1200}
+                  height={675}
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
               <div className="border-t border-zinc-800 bg-zinc-900/80 px-3 py-2 text-xs font-medium text-zinc-300 group-hover:text-amber-100 transition-colors">Step 2: Enter code & Claim</div>
             </div>
@@ -269,7 +407,7 @@ export default function Home() {
         <section className="space-y-6">
           <div className="text-center space-y-1.5">
             <h2 className="text-2xl font-bold text-white md:text-3xl text-glow">Expired Archive</h2>
-            <p className="text-xs text-zinc-400 md:text-sm">Retired codes tracking to help you identify obsolete rewards.</p>
+            <p className="text-xs text-zinc-400 md:text-sm">Retired The Forge codes tracking to help you identify obsolete rewards.</p>
           </div>
           <div className="grid gap-3 rounded-3xl border border-zinc-800/60 bg-zinc-950/40 backdrop-blur-md p-6 text-center shadow-lg shadow-black/30 md:grid-cols-2 lg:grid-cols-3">
             {expiredCodes.map((item) => (
@@ -319,7 +457,7 @@ export default function Home() {
 
           <h2 className="relative text-2xl font-bold text-white md:text-4xl text-glow text-center">Stay Ahead in The Forge</h2>
           <p className="mx-auto w-full max-w-2xl text-center text-sm text-zinc-400 md:text-base leading-relaxed whitespace-nowrap">
-            Bookmark this hub to grab new codes the moment they drop, and pair them with the redeem steps above so you never miss free rerolls or totems.
+            Bookmark this hub to grab new The Forge codes the moment they drop, and pair them with the redeem steps above so you never miss free rerolls or totems.
           </p>
           <div className="relative pt-2 flex justify-center">
             <a
@@ -330,6 +468,11 @@ export default function Home() {
             </a>
           </div>
         </section>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
       </div>
     </div>
   );

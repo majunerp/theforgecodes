@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Terms of Service - The Forge Codes",
     description: "Terms of Service for The Forge Codes website.",
+    alternates: {
+        canonical: "/terms",
+    },
 };
 
 export default function TermsPage() {
@@ -13,18 +16,30 @@ export default function TermsPage() {
                     Terms of Service
                 </h1>
 
-                <div className="prose prose-invert prose-zinc max-w-none space-y-6 text-zinc-300">
-                    <p className="text-lg">
-                        Last updated: December 2025
-                    </p>
+                 <div className="prose prose-invert prose-zinc max-w-none space-y-6 text-zinc-300">
+                     <p className="text-lg">
+                         Last updated: December 2025
+                     </p>
 
-                    <section className="space-y-4">
-                        <h2 className="text-xl font-semibold text-white">1. Acceptance of Terms</h2>
-                        <p>
-                            By accessing and using The Forge Codes website, you accept and agree to be bound by
-                            these Terms of Service. If you do not agree to these terms, please do not use our website.
-                        </p>
-                    </section>
+                     <section className="space-y-4">
+                         <h2 className="text-xl font-semibold text-white">Overview</h2>
+                         <p>
+                             These Terms of Service explain the rules for using The Forge Codes. By accessing or using this site, you agree to these Terms of Service.
+                             If you do not agree with these Terms of Service, please do not use the website.
+                         </p>
+                         <p>
+                             The Forge Codes provides code lists, guides, and informational content. These Terms of Service are intended to keep expectations clear: codes can expire, rewards can
+                             change without notice, and you are responsible for how you use any information on the site.
+                         </p>
+                     </section>
+
+                     <section className="space-y-4">
+                         <h2 className="text-xl font-semibold text-white">1. Acceptance of Terms</h2>
+                         <p>
+                             By accessing and using The Forge Codes website, you accept and agree to be bound by
+                             these Terms of Service. If you do not agree to these Terms of Service, please do not use our website.
+                         </p>
+                     </section>
 
                     <section className="space-y-4">
                         <h2 className="text-xl font-semibold text-white">2. Use of Content</h2>
@@ -52,13 +67,13 @@ export default function TermsPage() {
                         </p>
                     </section>
 
-                    <section className="space-y-4">
-                        <h2 className="text-xl font-semibold text-white">5. Changes to Terms</h2>
-                        <p>
-                            We reserve the right to modify these terms at any time. Continued use of the website
-                            after changes constitutes acceptance of the new terms.
-                        </p>
-                    </section>
+                     <section className="space-y-4">
+                         <h2 className="text-xl font-semibold text-white">5. Changes to Terms</h2>
+                         <p>
+                             We reserve the right to modify these Terms of Service at any time. Continued use of the website
+                             after changes constitutes acceptance of the updated Terms of Service.
+                         </p>
+                     </section>
 
                     <section className="space-y-4">
                         <h2 className="text-xl font-semibold text-white">6. Contact</h2>

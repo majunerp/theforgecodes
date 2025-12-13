@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Privacy Policy - The Forge Codes",
     description: "Privacy Policy for The Forge Codes website.",
+    alternates: {
+        canonical: "/privacy",
+    },
 };
 
 export default function PrivacyPage() {
@@ -13,16 +16,28 @@ export default function PrivacyPage() {
                     Privacy Policy
                 </h1>
 
-                <div className="prose prose-invert prose-zinc max-w-none space-y-6 text-zinc-300">
-                    <p className="text-lg">
-                        Last updated: December 2025
-                    </p>
+                 <div className="prose prose-invert prose-zinc max-w-none space-y-6 text-zinc-300">
+                     <p className="text-lg">
+                         Last updated: December 2025
+                     </p>
 
-                    <section className="space-y-4">
-                        <h2 className="text-xl font-semibold text-white">1. Information We Collect</h2>
-                        <p>
-                            We collect minimal information necessary to provide our services. This may include:
-                        </p>
+                     <section className="space-y-4">
+                         <h2 className="text-xl font-semibold text-white">Overview</h2>
+                         <p>
+                             This Privacy Policy explains what information we collect, why we collect it, and how we handle it when you browse The Forge Codes.
+                             If you continue to use this website, you are agreeing to this Privacy Policy. If you do not agree with this Privacy Policy, please stop using the site.
+                         </p>
+                         <p>
+                             We built this Privacy Policy to be straightforward: we do not sell personal data, and we only use limited data to keep the site running, understand basic traffic,
+                             and protect against abuse. This Privacy Policy applies to all pages on The Forge Codes, including our code lists, guides, and legal pages.
+                         </p>
+                     </section>
+
+                     <section className="space-y-4">
+                         <h2 className="text-xl font-semibold text-white">1. Information We Collect</h2>
+                         <p>
+                             We collect minimal information necessary to provide our services. This may include:
+                         </p>
                         <ul className="list-disc list-inside space-y-2 text-center">
                             <li>Usage data (pages visited, time spent on site)</li>
                             <li>Device information (browser type, operating system)</li>
@@ -42,13 +57,13 @@ export default function PrivacyPage() {
                         </ul>
                     </section>
 
-                    <section className="space-y-4">
-                        <h2 className="text-xl font-semibold text-white">3. Cookies</h2>
-                        <p>
-                            We may use cookies and similar technologies to enhance your browsing experience.
-                            You can control cookie settings through your browser preferences.
-                        </p>
-                    </section>
+                     <section className="space-y-4">
+                         <h2 className="text-xl font-semibold text-white">3. Cookies</h2>
+                         <p>
+                             Under this Privacy Policy, cookies may be used to enhance your browsing experience and help us understand aggregate site usage.
+                             You can control cookie settings through your browser preferences.
+                         </p>
+                     </section>
 
                     <section className="space-y-4">
                         <h2 className="text-xl font-semibold text-white">4. Third-Party Services</h2>
@@ -58,14 +73,14 @@ export default function PrivacyPage() {
                         </p>
                     </section>
 
-                    <section className="space-y-4">
-                        <h2 className="text-xl font-semibold text-white">5. Contact Us</h2>
-                        <p>
-                            If you have any questions about this Privacy Policy, please contact us.
-                        </p>
-                    </section>
-                </div>
-            </div>
-        </main>
+                     <section className="space-y-4">
+                         <h2 className="text-xl font-semibold text-white">5. Contact Us</h2>
+                         <p>
+                             If you have any questions about this Privacy Policy, please contact us.
+                         </p>
+                     </section>
+                 </div>
+             </div>
+         </main>
     );
 }
