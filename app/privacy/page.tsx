@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
     return (
         <main className="min-h-screen bg-black">
-            <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-20">
+            <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-20 text-center">
                 <h1 className="text-3xl md:text-4xl font-bold text-white mb-8">
                     Privacy Policy
                 </h1>
@@ -23,7 +23,7 @@ export default function PrivacyPage() {
                         <p>
                             We collect minimal information necessary to provide our services. This may include:
                         </p>
-                        <ul className="list-disc pl-6 space-y-2">
+                        <ul className="list-disc list-inside space-y-2 text-center">
                             <li>Usage data (pages visited, time spent on site)</li>
                             <li>Device information (browser type, operating system)</li>
                             <li>IP address for security and analytics purposes</li>
@@ -35,7 +35,7 @@ export default function PrivacyPage() {
                         <p>
                             We use the information we collect to:
                         </p>
-                        <ul className="list-disc pl-6 space-y-2">
+                        <ul className="list-disc list-inside space-y-2 text-center">
                             <li>Improve our website and services</li>
                             <li>Analyze usage patterns to enhance user experience</li>
                             <li>Ensure security and prevent abuse</li>
