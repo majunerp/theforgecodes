@@ -77,14 +77,14 @@ const faqEntries = [
 ];
 
 export const metadata: Metadata = {
-  title: "The Forge Codes (December 2025) - Working Rerolls, Redeem Steps, and Updates",
-  description: "Get the latest The Forge codes (December 2025), learn how to redeem them in Roblox, and see a verified archive of expired codes. Updated regularly with reroll rewards and practical tips.",
+  title: "The Forge Codes (Dec 2025) - Working Codes & Rerolls",
+  description: "Latest The Forge codes for December 2025: verified working codes, redeem steps, and an expired code archive to help you get free rerolls fast.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "The Forge Codes (December 2025) - Working Rerolls, Redeem Steps, and Updates",
-    description: "Use the latest The Forge codes for rerolls and learn the fastest way to redeem them in-game.",
+    title: "The Forge Codes (Dec 2025) - Working Codes & Rerolls",
+    description: "Latest The Forge codes for December 2025 with verified working codes, redeem steps, and an expired archive.",
   },
 };
 
