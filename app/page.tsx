@@ -216,9 +216,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="forge-codes-guide" className="space-y-6">
-          <div className="text-center space-y-2">
-            <h2 className="text-2xl font-bold text-white md:text-3xl text-glow">A Practical Guide to The Forge Codes</h2>
+        <section id="forge-codes-guide" className="space-y-12 md:space-y-14">
+          <div className="text-center space-y-3 md:space-y-4 pb-8 md:pb-10">
+            <h2 className="text-2xl font-bold text-white md:text-3xl text-glow tracking-tight leading-tight">A Practical Guide to The Forge Codes</h2>
             <p className="mx-auto max-w-3xl text-sm text-zinc-400 md:text-base leading-relaxed">
               The Forge codes are short redemption strings that unlock free in-game rewards, most commonly race rerolls (and occasionally other boosts). If you play The Forge for its
               forging-and-mining loop, you already know that a great run can hinge on your class or race perks. This guide explains what The Forge codes do, how to redeem The Forge codes
@@ -226,10 +226,10 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-2 items-start">
-            <div className="space-y-5 rounded-3xl border border-zinc-800 bg-zinc-950/60 backdrop-blur-md p-6 shadow-lg shadow-black/30 text-left">
-              <div className="space-y-3">
-                <h3 className="text-xl font-bold text-white">What The Forge codes do (and why rerolls matter)</h3>
+          <div className="grid gap-10 lg:gap-12 lg:grid-cols-2 items-stretch pt-6 md:pt-8">
+            <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 backdrop-blur-md p-8 shadow-lg shadow-black/30 text-left flex flex-col">
+              <div className="space-y-4 flex-1">
+                <h3 className="text-xl font-bold text-white tracking-tight leading-tight">What The Forge codes do (and why rerolls matter)</h3>
                 <p className="text-sm text-zinc-300 leading-relaxed">
                   In The Forge, rerolls let you change your race/class profile so you can chase perks that better fit your playstyle. Some players prefer tankier options for early survival,
                   while others prioritize damage, mobility, or utility when they start forging stronger weapons and armor. The Forge codes are valuable because they cut out the slow grind
@@ -241,81 +241,43 @@ export default function Home() {
                   early to avoid being stuck with a race you do not enjoy. If you are experienced, stack The Forge codes first, then reroll in batches so you can compare builds back-to-back.
                 </p>
               </div>
-
-              <div className="space-y-3">
-                <h3 className="text-xl font-bold text-white">How we verify The Forge codes on this page</h3>
-                <p className="text-sm text-zinc-300 leading-relaxed">
-                  We treat this homepage like a live checklist. When we add or move a code, we paste it into the in-game Codes field, hit Claim, and confirm the reward actually lands in your
-                  inventory. If a code returns a “does not exist” message (or silently does nothing), we move it into the archive. That is why you will see The Forge codes split into a working
-                  table and an expired list—so you can spend time forging, not troubleshooting.
-                </p>
-                <p className="text-sm text-zinc-300 leading-relaxed">
-                  For the cleanest results, we also re-check The Forge codes in fresh servers after big patches. A code that worked yesterday can flip to expired after a milestone ends, and some
-                  The Forge codes behave differently depending on when your server started. If you are stuck, jump to the redeem steps below and try again in a new server.
-                </p>
-              </div>
-
-              <div className="space-y-3">
-                <h3 className="text-xl font-bold text-white">Where to find new The Forge codes</h3>
-                <p className="text-sm text-zinc-300 leading-relaxed">
-                  New The Forge codes usually arrive alongside milestones, weekend boosts, release-style events, or seasonal updates. The fastest sources are in-game announcements and the
-                  community hubs where the developers post event details. If you prefer a single bookmark, keep this page pinned and check the working list first—the moment a new The Forge code
-                  drops, it shows up here after we verify it.
-                </p>
-              </div>
             </div>
 
-            <div className="space-y-4">
-              <div className="group overflow-hidden rounded-3xl border border-zinc-800 bg-black/60 shadow-2xl shadow-black/40 transition-all hover:border-amber-500/40">
-                <div className="overflow-hidden">
+            <div className="flex flex-col">
+              <div className="group overflow-hidden rounded-3xl border border-zinc-800 bg-black/60 shadow-2xl shadow-black/40 transition-all hover:border-amber-500/40 h-full">
+                <div className="overflow-hidden flex-1">
                   <Image
                     src="/theforgecodes-1.png"
                     alt="The Forge codes field inside the Settings menu"
                     width={1200}
                     height={675}
                     sizes="(max-width: 1024px) 100vw, 45vw"
-                    className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="border-t border-zinc-800 bg-zinc-900/80 px-3 py-2 text-xs font-medium text-zinc-300 group-hover:text-amber-100 transition-colors">
+                <div className="border-t border-zinc-800 bg-zinc-900/80 px-4 py-3 text-xs font-medium text-zinc-300 group-hover:text-amber-100 transition-colors">
                   The Forge codes are redeemed in Settings → Codes.
-                </div>
-              </div>
-
-              <div className="group overflow-hidden rounded-3xl border border-zinc-800 bg-black/60 shadow-2xl shadow-black/40 transition-all hover:border-amber-500/40">
-                <div className="overflow-hidden">
-                  <Image
-                    src="/wp7986935.webp"
-                    alt="The Forge themed artwork background"
-                    width={1400}
-                    height={788}
-                    sizes="(max-width: 1024px) 100vw, 45vw"
-                    className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="border-t border-zinc-800 bg-zinc-900/80 px-3 py-2 text-xs font-medium text-zinc-300 group-hover:text-amber-100 transition-colors">
-                  Tip: redeem The Forge codes before long mining sessions.
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3">
-            <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 backdrop-blur-md p-6 text-left shadow-lg shadow-black/30">
-              <h3 className="text-base font-bold text-white mb-2">Quick checklist</h3>
+          <div className="grid gap-6 md:grid-cols-3 pt-10">
+            <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 backdrop-blur-md p-7 text-left shadow-lg shadow-black/30 hover:border-zinc-700 transition-all">
+              <h3 className="text-lg font-bold text-white mb-4">Quick checklist</h3>
               <p className="text-sm text-zinc-300 leading-relaxed">
                 Copy The Forge codes exactly, remove trailing spaces, and claim in a fresh server if needed. If a code fails twice, treat it as expired and use the archive to avoid repeats.
               </p>
             </div>
-            <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 backdrop-blur-md p-6 text-left shadow-lg shadow-black/30">
-              <h3 className="text-base font-bold text-white mb-2">Best time to redeem</h3>
+            <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 backdrop-blur-md p-7 text-left shadow-lg shadow-black/30 hover:border-zinc-700 transition-all">
+              <h3 className="text-lg font-bold text-white mb-4">Best time to redeem</h3>
               <p className="text-sm text-zinc-300 leading-relaxed">
                 Redeem The Forge codes right before rerolling sessions or event boosts. During early December 2025, weekend events ran from <strong>December 6–8, 2025</strong> with extra luck
                 and free rerolls—timed drops like that are when The Forge codes matter most.
               </p>
             </div>
-            <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 backdrop-blur-md p-6 text-left shadow-lg shadow-black/30">
-              <h3 className="text-base font-bold text-white mb-2">Stay updated</h3>
+            <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 backdrop-blur-md p-7 text-left shadow-lg shadow-black/30 hover:border-zinc-700 transition-all">
+              <h3 className="text-lg font-bold text-white mb-4">Stay updated</h3>
               <p className="text-sm text-zinc-300 leading-relaxed">
                 Developers often tease seasonal updates (like a Christmas-style event) before announcing the full reward list. When that happens, check The Forge codes here first, then follow
                 our redemption steps so you do not miss limited rerolls.
@@ -326,14 +288,14 @@ export default function Home() {
 
         <section id="redeem" className="grid gap-6 rounded-3xl border border-zinc-800 bg-zinc-950/60 backdrop-blur-md p-6 shadow-xl shadow-black/30 md:grid-cols-[1.1fr_0.9fr] md:items-start overflow-hidden relative">
           <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent pointer-events-none" />
-          <div className="space-y-6 relative z-10">
+          <div className="space-y-8 relative z-10">
             <div className="space-y-2">
               <h2 className="text-2xl font-bold text-white md:text-3xl text-glow">How to Redeem</h2>
               <p className="text-xs text-zinc-400 md:text-sm">
                 Follow these exact steps to redeem The Forge codes and claim your rewards in The Forge.
               </p>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-5">
               {redeemSteps.map((step, index) => (
                 <div key={step.title} className="group flex gap-4 items-start">
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-zinc-800 border border-zinc-700 text-base font-bold text-amber-500 shadow-lg group-hover:bg-amber-500 group-hover:text-black group-hover:border-amber-400 transition-all duration-300">
@@ -345,6 +307,22 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="group overflow-hidden rounded-2xl border border-zinc-800 bg-black/60 shadow-2xl transition-all hover:border-amber-500/50 hover:shadow-amber-500/10">
+              <div className="overflow-hidden">
+                <Image
+                  src="/wp7986935.webp"
+                  alt="The Forge Roblox characters showcase"
+                  width={1400}
+                  height={788}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="border-t border-zinc-800 bg-zinc-900/80 px-3 py-2 text-xs font-medium text-zinc-300 group-hover:text-amber-100 transition-colors">
+                Tip: redeem The Forge codes before long mining sessions.
+              </div>
             </div>
           </div>
 
@@ -374,6 +352,44 @@ export default function Home() {
                 />
               </div>
               <div className="border-t border-zinc-800 bg-zinc-900/80 px-3 py-2 text-xs font-medium text-zinc-300 group-hover:text-amber-100 transition-colors">Step 2: Enter code & Claim</div>
+            </div>
+          </div>
+
+          <div className="relative z-10 md:col-span-2 space-y-6 pt-2">
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
+
+            <div className="grid gap-4 md:gap-6 lg:grid-cols-2 items-start">
+              <div className="rounded-2xl border border-zinc-800/80 bg-zinc-950/40 p-5 md:p-6 shadow-lg shadow-black/20">
+                <div className="space-y-3">
+                  <h3 className="text-base md:text-lg font-bold text-white">How we verify The Forge codes on this page</h3>
+                  <div className="space-y-3 text-sm text-zinc-300 leading-relaxed">
+                    <p>
+                      We treat this homepage like a live checklist. When we add or move a code, we paste it into the in-game Codes field, hit Claim, and confirm the reward actually lands in your
+                      inventory. If a code returns a “does not exist” message (or silently does nothing), we move it into the archive. That is why you will see The Forge codes split into a working
+                      table and an expired list—so you can spend time forging, not troubleshooting.
+                    </p>
+                    <p>
+                      For the cleanest results, we also re-check The Forge codes in fresh servers after big patches. A code that worked yesterday can flip to expired after a milestone ends, and
+                      some The Forge codes behave differently depending on when your server started. If you are stuck, jump to the redeem steps above and try again in a new server.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-zinc-800/80 bg-zinc-950/40 p-5 md:p-6 shadow-lg shadow-black/20">
+                <div className="space-y-3">
+                  <h3 className="text-base md:text-lg font-bold text-white">Where to find new The Forge codes</h3>
+                  <div className="space-y-3 text-sm text-zinc-300 leading-relaxed">
+                    <p>
+                      New The Forge codes usually arrive alongside milestones, weekend boosts, release-style events, or seasonal updates. The fastest sources are in-game announcements and the
+                      community hubs where the developers post event details.
+                    </p>
+                    <p>
+                      If you prefer a single bookmark, keep this page pinned and check the working list first—the moment a new The Forge code drops, it shows up here after we verify it.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
